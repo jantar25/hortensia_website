@@ -1,6 +1,6 @@
 import React from 'react'
 
-import UpperSide from '../Subpages/UpperSide'
+import UpperSide from '../Containers/UpperSide'
 
 const Home = () => {
   return (

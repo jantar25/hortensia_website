@@ -1,39 +1,65 @@
-import React,{ useState } from 'react'
+import React, { useState } from "react";
 
-
-
+import Logo from "../Asset/images/logo.png";
+import MenuIcon from '../Asset/icons/bars.svg'
 
 const Navbar = () => {
-    const [navbar,setNavbar]=useState(false);
+  const [navbar, setNavbar] = useState(false);
+  const [toggleMenu,setToggleMenu] = useState(false);
 
-    const changeBackground=()=>{
-        if(window.scrollY>=80){
-          setNavbar(true)
-        } else{
-          setNavbar(false)
-        }
-      }
-    window.addEventListener('scroll',changeBackground)
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
 
-    // const navLinkActive = "bg-blue-300 rounded-full"
-    // const LinkActive = "border-blue-300 border-b-4"
+  const Menu = (display) => (
+    <ul className={`${display} items-center text-gray-300`}>
+      <li className="mx-1">Services</li>
+      <li className="mx-1">Aftercare</li>
+      <li className="mx-1">Pricelist</li>
+      <li className="mx-1">FAQ</li>
+      <li className="mx-1">About Us</li>
+    </ul>
+  );
+
+  // const navLinkActive = "bg-blue-300 rounded-full"
+  // const LinkActive = "border-blue-300 border-b-4"
   return (
-    <div className={`sticky top-0 z-30 bg-[#040C18] text-white px-4 lg:px-20 py-4  ${navbar? 'bg-[#000]' : 'bg-transparent'}`} >
-            <div className='flex items-center justify-between'>
-                <div className='flex items-center'>
-                    <h1 className='text-2xl font-[700] mr-16'>LOGO</h1>
-                    <ul className='flex items-center text-gray-300'>
-                        <li className='mx-2'>Services</li>
-                        <li className='mx-2'>Aftercare</li>
-                        <li className='mx-2'>Pricelist</li>
-                        <li className='mx-2'>FAQ</li>
-                        <li className='mx-2'>About Us</li>
-                    </ul>
-                </div>
-                <button className='px-4 py-2 border'>Book Appointment</button>
+    <div
+      className={`sticky top-0 z-30 text-white px-4 lg:px-20 py-4 ${
+        navbar ? "bg-[#040C18]" : "bg-transparent"
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center sm:mr-8">
+          <img src={Logo} alt="Logo" className="w-8 mr-2" />
+          <div className="hidden sm:inline">
+            <h1 className="text-md font-[700] text-[#e9a460]">
+              ORGANIC ESSENTIALS
+            </h1>
+            <p className="text-xs">Skin & Nails Spa</p>
+          </div>
+        </div>
+        <div className="hidden md:flex">
+          <Menu display={'flex'} />
+        </div>
+        <button className="p-2 border rounded-full">
+          Book Appointment
+        </button>
+        <img src={MenuIcon} alt="menu-bar" className="md:hidden" onClick={()=>setToggleMenu(!toggleMenu)}/>
+      </div>
+      {toggleMenu && (
+            <div className="flex justify-start items-start flex-col bg-[#040C18] text-left p-8 absolute
+             top-12 right-2 mt-8 min-w-[210px] rounded shadow-lg shadow-[#e9a460] z-50">
+                <Menu />
             </div>
+          )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
