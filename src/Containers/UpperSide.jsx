@@ -5,7 +5,7 @@ import Hero from '../Components/Hero'
 
 const UpperSide = () => {
   return (
-    <div className='bg-[#040C18]'>
+    <div className='px-4 lg:px-20 text-white bg-[#040C18]'>
         <Navbar />
         <Hero />
     </div>
