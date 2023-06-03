@@ -1,11 +1,13 @@
 import React from 'react'
 
-import UpperSide from '../Containers/UpperSide'
+import Header from '../Containers/Header'
+import AfterCare from '../Containers/AfterCare'
 
 const Home = () => {
   return (
     <div>
-        <UpperSide />
+        <Header />
+        <AfterCare />
     </div>
   )
 }
