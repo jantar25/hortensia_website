@@ -2,7 +2,7 @@ import React from 'react'
 
 import ArrowRight from '../Asset/icons/arrow-right.svg'
 
-const AfterCareCard = ({item}) => {
+const AfterCarCard = ({item}) => {
   return (
     <div className='max-w-[250px] p-4'>
         <h1>{item.title}</h1>
@@ -15,4 +15,4 @@ const AfterCareCard = ({item}) => {
   )
 }
 
-export default AfterCareCard
+export default AfterCarCard

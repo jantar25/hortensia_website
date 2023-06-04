@@ -4,17 +4,7 @@ import Logo from "../Asset/images/logo.png";
 import MenuIcon from '../Asset/icons/bars.svg'
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
   const [toggleMenu,setToggleMenu] = useState(false);
-
-  const changeBackground = () => {
-    if (window.scrollY >= 15) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-  window.addEventListener("scroll", changeBackground);
 
   const Menu = () => (
     <>
@@ -26,15 +16,9 @@ const Navbar = () => {
     </>
   );
 
-  // const navLinkActive = "bg-blue-300 rounded-full"
-  // const LinkActive = "border-blue-300 border-b-4"
   return (
-    <div
-      className={`sticky top-0 z-30 py-4 text-white ${
-        navbar ? "bg-[#040C18]" : "bg-transparent"
-      }`}
-    >
-      <div className="flex items-center justify-between">
+    <div className='sticky top-0 z-30 py-4 text-white bg-[#040C18]'>
+      <div className="flex items-center justify-between px-4 lg:px-20 z-20">
         <div className="flex items-center sm:mr-8">
           <img src={Logo} alt="Logo" className="w-8 mr-2" />
           <div className="hidden sm:inline">
