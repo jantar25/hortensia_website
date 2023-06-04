@@ -6,7 +6,7 @@ const ServicesCard = ({service}) => {
         <div className="w-[80px]">
             <img src={service.icon} alt='service_icon' className='w-full'/>
         </div>
-        <h2 className='text-md mt-2 text-[#cf853a] font-bold'>{service.title}</h2>
+        <h2 className='text-md mt-2 text-text font-bold'>{service.title}</h2>
     </div>
   )
 }

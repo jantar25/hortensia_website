@@ -19,9 +19,9 @@ module.exports = {
     extend: {
       colors : theme =>({
         "bg" : "#040C18",
-        "blog" : "#042c54",
+        "blog" : "#d2d7e9",
         "footer" : "#031B34",
-        "text" : "#81AFDD",
+        "text" : "#cf853a",
         "subtext" : "#FF8A71"
       })
     },
