@@ -2,12 +2,14 @@ import React from 'react'
 
 const AboutCard = ({person}) => {
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center m-2'>
         <div className="w-[275px] h-[400px]">
-            <img src={person.img} alt='person-img' className='w-full h-full object-cover' />
+            <img src={person.img} alt='person-img' className='w-full h-full object-cover'/>
         </div>
-        <h3>{person.names}</h3>
-        <p>{person.title}</p>
+        <div className="flex flex-col items-center justify-center mt-2">
+          <h3 className='text-text text-lg font-Poppins'>{person.names}</h3>
+          <p className='text-sm text-gray-400'>{person.title}</p>
+        </div>
     </div>
   )
 }

@@ -5,6 +5,8 @@ import Hero from '../Containers/Hero'
 import ServicesCards from '../Containers/ServicesCards'
 import AfterCare from '../Containers/AfterCare'
 import AboutUs from '../Containers/AboutUs'
+import HoursofOperation from '../Containers/HoursofOperation'
+import Treatments from '../Containers/Treatments'
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
         <ServicesCards />
         <AfterCare />
         <AboutUs />
+        <Treatments />
+        <HoursofOperation />
     </div>
   )
 }
