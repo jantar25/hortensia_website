@@ -5,8 +5,8 @@ import dot from '../Asset/icons/dot.svg'
 
 const HoursofOperation = () => {
   return (
-    <div className="px-4 lg:px-20 bg-bg pb-8 pt-8 sm:pt-20 lg:pt-28 2xl:pt-36 
-    -mt-4 sm:-mt-10 lg:-mt-16 2xl:-mt-20">
+    <div className="px-4 lg:px-20 bg-bg pb-8 py-8 sm:py-20 lg:py-28 2xl:py-36 
+    -my-4 sm:-my-10 lg:-my-16 2xl:-my-20">
         <div className="py-4 text-bg bg-slate-200 rounded-lg">
             <div className="flex flex-col md:flex-row justify-between">
               {schedules.map(time => (
