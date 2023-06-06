@@ -18,8 +18,8 @@ const Home = () => {
         <AfterCare />
         <AboutUs />
         <HoursofOperation />
-        <Treatments />
-        <Customer />
+        {/* <Treatments />
+        <Customer /> */}
     </div>
   )
 }
