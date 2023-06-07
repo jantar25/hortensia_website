@@ -17,7 +17,7 @@ const Treatments = () => {
                 <p className="text-gray-300">The range of practices that support skin integrity, enhance its appearance, and relieve skin conditions</p>
               </div>
               <div className="text-gray-300 flex items-center justify-around flex-wrap">
-                {treatments.map(item => <TreatmentCard item={item} />)}
+                {treatments.map(item => <TreatmentCard key={item.id} item={item} />)}
               </div>
             </div>
             <div className="flex-1 relative md:flex justify-center items-center">

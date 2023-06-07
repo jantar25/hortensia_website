@@ -16,7 +16,7 @@ const AboutUs = () => {
                 </h1>
             </div>
             <div className="flex flex-wrap justify-around items-center">
-                {Persons.map(person => <AboutCard person={person} />)}
+                {Persons.map(person => <AboutCard key={person.id} person={person} />)}
             </div>
             <div className='flex flex-col sm:flex-row items-start sm:justify-between mt-8'>
                 <div>

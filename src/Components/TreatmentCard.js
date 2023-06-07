@@ -9,8 +9,8 @@ const TreatmentCard = ({item}) => {
         </div>
         <h2 className='font-bold mb-1 text-lg'>{item.title}</h2>
         <ul className='list-disc'>
-            {item.services.map(service =>
-            <li className='text-text'>
+            {item.services.map((service,index) =>
+            <li key={index} className='text-text'>
                 <span className='text-black'>{service}</span>
             </li>)}
         </ul>

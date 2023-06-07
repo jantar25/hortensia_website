@@ -14,7 +14,7 @@ const AfterCare = () => {
                 <img src={aftercareImg} alt="new_girl_pic" />
             </div>
             <div className="flex-1 mt-8 md:mt-0 mb-[80px] grid grid-rows-4 sm:grid-rows-2 grid-flow-col gap-2">
-                {all_Aftercares.map(item =><AfterCareCard item={item} /> )}
+                {all_Aftercares.map(item =><AfterCareCard key={item.id} item={item} /> )}
             </div>
         </div>
     </div>
