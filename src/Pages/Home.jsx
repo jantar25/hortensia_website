@@ -8,6 +8,7 @@ import AboutUs from '../Containers/AboutUs'
 import HoursofOperation from '../Containers/HoursofOperation'
 import Treatments from '../Containers/Treatments'
 import Customer from '../Containers/Customer'
+import Subscribe from '../Containers/Subscribe'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <HoursofOperation />
         <Treatments />
         <Customer />
+        <Subscribe />
     </div>
   )
 }
