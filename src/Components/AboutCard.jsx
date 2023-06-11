@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutCard = ({person}) => {
   return (
-    <div className='flex flex-col items-center justify-center m-2'>
+    <div data-aos="zoom-in" className='flex flex-col items-center justify-center m-2'>
         <div className="w-[275px] h-[400px]">
             <img src={person.img} alt='person-img' className='w-full h-full object-cover'/>
         </div>

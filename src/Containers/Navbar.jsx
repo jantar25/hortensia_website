@@ -2,17 +2,28 @@ import React, { useState } from "react";
 
 import Logo from "../Asset/images/logo.png";
 import MenuIcon from '../Asset/icons/bars.svg'
+import useClickOutside from "../Hooks/useClickOutside";
 
 const Navbar = () => {
   const [toggleMenu,setToggleMenu] = useState(false);
+  const handleToggleMenu = () => {
+    setToggleMenu(!toggleMenu)
+  }
+  const closeMenu = () => {
+    setToggleMenu(false)
+  }
+
+  const dropDownRef = useClickOutside(closeMenu)
 
   const Menu = () => (
     <>
-      <li className="m-1">Services</li>
-      <li className="m-1">Aftercare</li>
-      <li className="m-1">Pricelist</li>
-      <li className="m-1">FAQ</li>
-      <li className="m-1">About Us</li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
+        Services
+      </li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>Aftercare</li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>Pricelist</li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>FAQ</li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>About Us</li>
     </>
   );
 
@@ -34,11 +45,11 @@ const Navbar = () => {
         <button className="p-2 border rounded-full">
           Book Appointment
         </button>
-        <img src={MenuIcon} alt="menu-bar" className="md:hidden" onClick={()=>setToggleMenu(!toggleMenu)}/>
+        <img src={MenuIcon} alt="menu-bar" className="md:hidden cursor-pointer" onClick={handleToggleMenu}/>
       </div>
       {toggleMenu && (
-            <div className="flex justify-start items-start bg-bg text-left p-8 absolute
-             top-12 right-2 mt-8 min-w-[210px] rounded shadow-lg shadow-text z-50">
+            <div ref={dropDownRef} className="flex justify-start items-start bg-bg text-left p-8 absolute
+             top-12 right-2 mt-8 min-w-[210px] rounded shadow-lg shadow-text z-50" >
               <ul className=' text-gray-300'>
                 <Menu />
               </ul>
