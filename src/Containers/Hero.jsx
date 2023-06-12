@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink } from 'react-router-hash-link';
 
 import Skincare from '../Asset/images/skincare.png'
 import Spiral from '../Asset/images/star.png'
@@ -25,7 +26,9 @@ const Hero = () => {
                 </p>
                 <div className="flex items-center justify-center md:justify-start mb-8 xl:mb-20 mt-4">
                     <span className='mr-2 font-semibold'>See our treatment</span>
-                    <img src={ArrowDown} alt='arrow-down pic' className='animate-bounce' />
+                    <HashLink smooth to="/#treatment">
+                        <img src={ArrowDown} alt='arrow-down pic' className='animate-bounce' />
+                    </HashLink>
                 </div>
                 <div className='flex items-center justify-center md:justify-start'>
                     <hr className='hidden md:flex w-[50px] lg:w-[150px] border-slate-600'/>

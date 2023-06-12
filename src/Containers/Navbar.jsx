@@ -18,9 +18,9 @@ const Navbar = () => {
 
   const Menu = () => (
     <>
-      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
+      {/* <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
         <HashLink smooth to="/#services">Services</HashLink>
-      </li>
+      </li> */}
       <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
         <HashLink smooth to="/#aftercare">Aftercare</HashLink>
       </li>
@@ -39,15 +39,17 @@ const Navbar = () => {
   return (
     <div className='sticky top-0 z-30 py-4 text-white bg-bg'>
       <div className="flex items-center justify-between px-4 lg:px-20 z-20">
-        <div className="flex items-center sm:mr-8">
-          <img src={Logo} alt="Logo" className="w-8 mr-2" />
-          <div className="hidden sm:inline">
-            <h1 className="text-md font-[700] text-text">
-              ORGANIC ESSENTIALS
-            </h1>
-            <p className="text-xs">Skin & Nails Spa</p>
+        <HashLink smooth to="/#">
+          <div className="flex items-center sm:mr-8 cursor-pointer">
+            <img src={Logo} alt="Logo" className="w-8 mr-2" />
+            <div className="hidden sm:inline">
+              <h1 className="text-md font-[700] text-text">
+                ORGANIC ESSENTIALS
+              </h1>
+              <p className="text-xs">Skin & Nails Spa</p>
+            </div>
           </div>
-        </div>
+        </HashLink>
         <ul className='hidden md:flex items-center text-gray-300'>
           <Menu />
         </ul>
