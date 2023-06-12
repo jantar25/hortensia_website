@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashLink } from 'react-router-hash-link';
 
 import Logo from "../Asset/images/logo.png";
 import MenuIcon from '../Asset/icons/bars.svg'
@@ -18,12 +19,20 @@ const Navbar = () => {
   const Menu = () => (
     <>
       <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
-        Services
+        <HashLink smooth to="/#services">Services</HashLink>
       </li>
-      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>Aftercare</li>
-      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>Pricelist</li>
-      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>FAQ</li>
-      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>About Us</li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
+        <HashLink smooth to="/#aftercare">Aftercare</HashLink>
+      </li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
+        <HashLink smooth to="/#about">About Us</HashLink>
+      </li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
+        <HashLink smooth to="/#treatment">Pricelist</HashLink>
+      </li>
+      <li className="m-1 hover:text-gray-500 cursor-pointer" onClick={closeMenu}>
+        <HashLink smooth to="/#customers">Customers</HashLink>
+      </li>
     </>
   );
 
@@ -43,7 +52,7 @@ const Navbar = () => {
           <Menu />
         </ul>
         <button className="p-2 border rounded-full">
-          Book Appointment
+          <HashLink smooth to="/#contacts">Book Appointment</HashLink>
         </button>
         <img src={MenuIcon} alt="menu-bar" className="md:hidden cursor-pointer" onClick={handleToggleMenu}/>
       </div>

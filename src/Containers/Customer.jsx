@@ -8,7 +8,7 @@ import customerImages from '../Constants/CustomerImgs';
 
 const Customer = () => {
   return (
-    <div className="px-4 lg:px-20 bg-blog pt-20 pb-4 lg:pt-32 -mt-10 sm:-mt-16 2xl:-mt-24">
+    <div className="px-4 lg:px-20 bg-blog pt-20 pb-4 lg:pt-32 -mt-10 sm:-mt-16 2xl:-mt-24" id='customers'>
         <div className='flex flex-col items-center mb-8'>
             <h3 className='text-text py-2 font-bold text-xl z-10'>OUR CUSTOMER</h3>
             <h1 className='font-Poppins text-2xl md:text-3xl font-bold md:mb-8 md:w-[60%] text-center z-10'>
@@ -59,9 +59,9 @@ const Customer = () => {
             </Swiper>    
           </div>
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
-            <h2 data-aos="fade-up-right" className='flex-1 text-center text-3xl font-[900] m-4 text-bg'>About our Awesome Service</h2>
-            <p className="flex-1 text-center m-4 text-gray-500 text-sm">The range of practices that support skin integrity, enhance its appearance, and relieve skin conditions</p>
-            <button data-aos="fade-up-left" className="flex-1 p-2 m-4 border border-bg rounded-full font-bold">See All Treatment</button>
+            <h2 data-aos="fade-right" className='flex-1 text-center text-3xl font-[900] m-4 text-bg'>About our Awesome Service</h2>
+            <p data-aos="zoom-in" className="flex-1 text-center m-4 text-gray-500 text-sm">The range of practices that support skin integrity, enhance its appearance, and relieve skin conditions</p>
+            <button data-aos="fade-left" className="flex-1 p-2 m-4 border border-bg rounded-full font-bold">See All Treatment</button>
           </div>
           <hr className='border-gray-400 ' />
         </div>

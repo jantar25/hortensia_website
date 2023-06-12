@@ -5,7 +5,7 @@ import AboutCard from '../Components/AboutCard'
 
 const AboutUs = () => {
   return (
-    <div className='relative px-4 lg:px-20 bg-bg pb-4 lg:pb-16 pt-10 md:pt-20 text-white -skew-y-3 rounded-tl-[40px]'>
+    <div className='relative px-4 lg:px-20 bg-bg pb-4 lg:pb-16 pt-10 md:pt-20 text-white -skew-y-3 rounded-tl-[40px]' id='about'>
         <div className='w-[80px] h-[80px] bg-blog rounded-full absolute -top-[80px] right-0 z-10'></div>
         <div className='w-[40px] h-[40px] bg-bg absolute -top-[39px] right-0'></div>
         <div className="skew-y-3">

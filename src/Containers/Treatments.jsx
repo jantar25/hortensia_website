@@ -6,7 +6,7 @@ import treatments from '../Constants/Treatments'
 
 const Treatments = () => {
   return (
-    <div className='relative px-4 lg:px-20 bg-bg py-10 xl:py-24 text-white skew-y-3 rounded-bl-[40px]'>
+    <div className='relative px-4 lg:px-20 bg-bg py-10 xl:py-24 text-white skew-y-3 rounded-bl-[40px]' id='treatment'>
         <div className='w-[80px] h-[80px] bg-blog rounded-full absolute -bottom-[80px] right-0 z-10'></div>
         <div className='w-[40px] h-[40px] bg-bg absolute -bottom-[39px] right-0'></div>
         <div className="-skew-y-3 bg-bg text-white flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start my-4">

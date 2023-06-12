@@ -14,7 +14,7 @@ import Footer from '../Containers/Footer'
 
 const Home = () => {
   return (
-    <div>
+    <div className="font-Manrope">
         <Navbar />
         <Hero />
         <ServicesCards />
