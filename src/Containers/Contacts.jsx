@@ -9,7 +9,7 @@ import facebook from '../Asset/icons/facebook.svg'
 
 const Contacts = () => {
   return (
-    <div className='flex flex-col px-4 lg:px-20 pt-20 bg-blog' id='contacts'>
+    <div className='flex flex-col px-4 lg:px-20 pt-20 bg-blog overflow-x-hidden' id='contacts'>
         <h4 className="text-text py-2 font-bold text-xl">CONTACT US</h4>
         <h2 className='font-Poppins text-2xl md:text-4xl text-bg font-bold md:mb-8'>We would love to hear fom you.</h2>
             <div className='flex flex-col md:flex-row'>
