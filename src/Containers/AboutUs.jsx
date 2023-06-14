@@ -9,7 +9,7 @@ const AboutUs = () => {
         <div className='w-[80px] h-[80px] bg-blog rounded-full absolute -top-[80px] right-0 z-10'></div>
         <div className='w-[40px] h-[40px] bg-bg absolute -top-[39px] right-0'></div>
         <div className="skew-y-3">
-            <div className='flex flex-col items-center mb-8'>
+            <div className='flex flex-col items-center mb-8 pt-8 md:pt-0'>
                 <h3 className='text-text py-2 font-bold text-xl'>ABOUT US</h3>
                 <h1 className='font-Poppins text-2xl md:text-3xl font-bold md:mb-8 md:w-[60%] text-center'>
                     With Successfull Career in the Bealth and Beauty Industry.

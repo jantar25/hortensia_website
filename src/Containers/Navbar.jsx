@@ -37,35 +37,37 @@ const Navbar = () => {
   );
 
   return (
-    <div className='sticky top-0 z-30 py-4 text-white bg-bg'>
-      <div className="flex items-center justify-between px-4 lg:px-20 z-20">
-        <HashLink smooth to="/#">
-          <div className="flex items-center sm:mr-8 cursor-pointer">
-            <img src={Logo} alt="Logo" className="w-8 mr-2" />
-            <div className="hidden sm:inline">
-              <h1 className="text-md font-[700] text-text">
-                ORGANIC ESSENTIALS
-              </h1>
-              <p className="text-xs">Skin & Nails Spa</p>
+    <div className='sticky top-0 z-30 h-16 flex items-center text-white bg-bg'>
+      <div className="w-full">
+        <div className="flex items-center justify-between px-4 lg:px-20 z-20">
+          <HashLink smooth to="/#">
+            <div className="flex items-center sm:mr-8 cursor-pointer">
+              <img src={Logo} alt="Logo" className="w-8 mr-2" />
+              <div className="hidden sm:inline">
+                <h1 className="text-md font-[700] text-text">
+                  ORGANIC ESSENTIALS
+                </h1>
+                <p className="text-xs">Skin & Nails Spa</p>
+              </div>
             </div>
-          </div>
-        </HashLink>
-        <ul className='hidden md:flex items-center text-gray-300'>
-          <Menu />
-        </ul>
-        <button className="p-2 border rounded-full">
-          <HashLink smooth to="/#contacts">Book Appointment</HashLink>
-        </button>
-        <img src={MenuIcon} alt="menu-bar" className="md:hidden cursor-pointer" onClick={handleToggleMenu}/>
+          </HashLink>
+          <ul className='hidden md:flex items-center text-gray-300'>
+            <Menu />
+          </ul>
+          <button className="p-2 border rounded-full">
+            <HashLink smooth to="/#contacts">Book Appointment</HashLink>
+          </button>
+          <img src={MenuIcon} alt="menu-bar" className="md:hidden cursor-pointer" onClick={handleToggleMenu}/>
+        </div>
+        {toggleMenu && (
+              <div ref={dropDownRef} className="flex justify-start items-start bg-bg text-left p-8 absolute
+              top-12 right-2 mt-8 min-w-[210px] rounded shadow-lg shadow-text z-50" >
+                <ul className=' text-gray-300'>
+                  <Menu />
+                </ul>
+              </div>
+            )}
       </div>
-      {toggleMenu && (
-            <div ref={dropDownRef} className="flex justify-start items-start bg-bg text-left p-8 absolute
-             top-12 right-2 mt-8 min-w-[210px] rounded shadow-lg shadow-text z-50" >
-              <ul className=' text-gray-300'>
-                <Menu />
-              </ul>
-            </div>
-          )}
     </div>
   );
 };

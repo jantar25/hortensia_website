@@ -2,7 +2,7 @@ import React from 'react'
 
 const TreatmentCard = ({item}) => {
   return (
-    <div className='relative bg-white text-black p-2 m-1 flex flex-col items-center justify-center 
+    <div data-aos="flip-left" className='relative bg-white text-black p-2 m-1 flex flex-col items-center justify-center 
     rounded-lg h-[260px] w-[200px] md:w-[150px] lg:w-[135px] xl:w-[160px] md:last:hidden lg:last:flex'>
         <div className='h-[80px]'>
             <img src={item.icon} alt={item.title} className='h-full'/>

@@ -9,7 +9,7 @@ import UnFilledStar from '../Asset/icons/starunfill.svg'
 
 const Hero = () => {
   return (
-    <div className='flex flex-col-reverse md:flex-row items-end justify-center pb-[170px] 
+    <div className='flex flex-col-reverse md:flex-row items-end justify-center pb-[150px] 
     pt-4 lg:pt-16 px-4 lg:px-20 text-white bg-bg'>
         <div className="flex-1 relative w-full h-full mt-4 md:mt-0">
             <img src={Spiral} alt='Spiral pic' className='w-20 absolute left-0 bottom-32'/>

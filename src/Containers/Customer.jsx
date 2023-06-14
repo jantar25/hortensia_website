@@ -59,9 +59,9 @@ const Customer = () => {
             </Swiper>    
           </div>
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
-            <h2 data-aos="fade-right" className='flex-1 text-center text-3xl font-[900] m-4 text-bg'>About our Awesome Service</h2>
+            <h2 data-aos="fade-up" className='flex-1 text-center text-3xl font-[900] m-4 text-bg'>About our Awesome Service</h2>
             <p data-aos="zoom-in" className="flex-1 text-center m-4 text-gray-500 text-sm">The range of practices that support skin integrity, enhance its appearance, and relieve skin conditions</p>
-            <button data-aos="fade-left" className="flex-1 p-2 m-4 border border-bg rounded-full font-bold">See All Treatment</button>
+            <button data-aos="fade-up" className="flex-1 p-2 m-4 border border-bg rounded-full font-bold">See All Treatment</button>
           </div>
           <hr className='border-gray-400 ' />
         </div>
