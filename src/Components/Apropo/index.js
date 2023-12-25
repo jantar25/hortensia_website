@@ -1,8 +1,8 @@
 import React from 'react'
 import {Content,ContentWrap,Title,Description,TeamCardWrap,TeamCard,ImgWrap,Img,Descrip} from './Styles'
-import Image1 from '../../images/1.JPG'
-import Image2 from '../../images/2.JPG'
-import Image3 from '../../images/3.JPG'
+import Image1 from '../../images/1.jpg'
+import Image2 from '../../images/2.jpg'
+import Image3 from '../../images/3.jpg'
 
 const index = () => {
     return (

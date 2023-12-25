@@ -1,7 +1,7 @@
 import React from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Event1 from "../../../images/jelele.JPG"
+import Event1 from "../../../images/jelele.jpg"
 import {Header,Title,HeaderImg} from './Styles'
 
 const Head = () => {

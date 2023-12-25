@@ -9,9 +9,9 @@ import {
   DescriptionCntainer,
   ProgramsDescription,
 } from "./Styles";
-import Hadisi from "../../images/Hadisi.JPG";
-import Interprenship from "../../images/Interprenship.JPG";
-import Pambazuko from "../../images/Pambazuko.JPG";
+import Hadisi from "../../images/Hadisi.jpg";
+import Interprenship from "../../images/Interprenship.jpg";
+import Pambazuko from "../../images/Pambazuko.jpg";
 
 const Programs = () => {
   return (
