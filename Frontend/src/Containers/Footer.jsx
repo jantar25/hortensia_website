@@ -1,7 +1,7 @@
 import React from 'react'
 import { HashLink } from 'react-router-hash-link';
 
-import Logo from "../Asset/images/logo.png";
+import Logo from "../Asset/images/hortensia_logo.PNG";
 
 const Footer = () => {
   return (
@@ -9,13 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between">
             <HashLink smooth to="/#">
                 <div className="flex items-center my-4">
-                    <img src={Logo} alt="Logo" className="w-8 mr-2" />
-                    <div>
-                        <h1 className="text-md font-[700] text-text">
-                        ORGANIC ESSENTIALS
-                        </h1>
-                        <p className="text-xs">Skin & Nails Spa</p>
-                    </div>
+                    <img src={Logo} alt="Logo" className="h-12 mr-2" />
                 </div>
             </HashLink>
             <ul className="flex flex-col sm:flex-row items-center my-4">
@@ -33,7 +27,7 @@ const Footer = () => {
             </ul>
         </div>
         <hr className='border-gray-800 my-8' />
-        <p className='text-center text-gray-400'>Ⓒ2023, All rights powered by Lorganic Essentials.</p>
+        <p className='text-center text-gray-400'>Copyright © 2024 Hortensia Organisation™. All rights reserved.</p>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
+import { store } from '../Redux/store.js'
 import englishTranslation from './Languages/English/translation.json'
 import frenchTranslation from './Languages/French/translation.json'
 
@@ -13,13 +14,10 @@ const resources = {
   }
 }
 
-const savedLanguage = localStorage.getItem('i18nextLng') || 'english';
-
 i18next
   .use(initReactI18next)
   .init({
     resources,
-    lng: savedLanguage.toLowerCase(),
     fallbackLng:'english',
     keySeparator: false,
     interpolation: {
@@ -31,9 +29,9 @@ i18next
     }
   })
 
-// store.subscribe(() => {
-//   const language = localStorage.getItem('i18nextLng')
-//   i18next.changeLanguage(language.toLocaleLowerCase())
-// })
+  store.subscribe(() => {
+  const language = store.getState().preferences.language
+  i18next.changeLanguage(language.toLocaleLowerCase())
+})
 
 export default i18next

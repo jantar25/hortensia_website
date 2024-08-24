@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { HashLink } from 'react-router-hash-link';
+import { useDispatch, useSelector } from "react-redux";
 
+import { setLanguage } from "../Redux/preferencesRedux";
 import { menuLanguages } from "../Constants/menuLanguages";
 import useClickOutside from "../Hooks/useClickOutside";
 import TogglableMenu from "../Components/TogglableMenu";
@@ -10,9 +12,10 @@ import MenuIcon from '../Asset/icons/bars.svg'
 
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const [toggleMenu,setToggleMenu] = useState(false);
   const [toggleLanguage,setToggleLanguage] = useState(false);
-  const language = localStorage.getItem('i18nextLng')
+  const language = useSelector((state) => state.preferences.language);
   const currentLanguage = menuLanguages.find((lang) => lang.title === language.toLowerCase())
 
   const handleToggleMenu = () => {
@@ -28,7 +31,7 @@ const Navbar = () => {
   })
 
   const changeChange = (newLanguage) => {
-    localStorage.setItem('i18nextLng', newLanguage.title.toLowerCase())
+    dispatch(setLanguage(newLanguage.title.toLowerCase()))
     setToggleLanguage(false)
   }
 
@@ -65,7 +68,7 @@ const Navbar = () => {
           <ul className='hidden md:flex items-center text-gray-300'>
             <Menu />
           </ul>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <img
               data-testid='language-button'
               src={currentLanguage?.image}
