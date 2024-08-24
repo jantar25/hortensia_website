@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 
 function App() {
   AOS.init({duration:1000});
+  localStorage.setItem('i18nextLng','english')
   return (
     <Router>
       <Routes>

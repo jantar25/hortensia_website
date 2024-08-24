@@ -1,5 +1,6 @@
 import React from 'react'
 import { HashLink } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next'
 
 import Skincare from '../Asset/images/skincare.png'
 import Spiral from '../Asset/images/star.png'
@@ -8,6 +9,7 @@ import FilledStar from '../Asset/icons/star.svg'
 import UnFilledStar from '../Asset/icons/starunfill.svg'
 
 const Hero = () => {
+  const { t } = useTranslation()
   return (
     <div className='flex flex-col-reverse md:flex-row items-end justify-center pb-[150px] 
     pt-4 lg:pt-16 px-4 lg:px-20 text-white bg-bg'>
@@ -21,8 +23,10 @@ const Hero = () => {
                 Make your look even<span className='text-text mx-2'>More Perfect</span>with our treatment.
             </p>
             <div className='md:ml-8'>
-                <p className='text-center md:text-start text-gray-400 text-md my-2'>"Everything has a beauty but not everyone sees it"
-                    <span className='text-text ml-1'>.Konfisius</span> 
+                <p className='text-center md:text-start text-gray-400 text-md my-2'>
+                    "Everything has a beauty but not everyone sees it"
+                    <span className='text-text ml-1'>.Konfisius</span>
+                    <span className='text-text ml-1'>{t('hello-world')}</span> 
                 </p>
                 <div className="flex items-center justify-center md:justify-start mb-8 xl:mb-20 mt-4">
                     <span className='mr-2 font-semibold'>See our treatment</span>
